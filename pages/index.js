@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { LogoFacebook, LogoLinkedin, LogoGithub, LogoNodejs } from 'react-ionicons'
-
-import Main from "./main"
+import { LogoFacebook, LogoLinkedin, LogoGithub } from 'react-ionicons'
 
 export default function Index() {
   return (

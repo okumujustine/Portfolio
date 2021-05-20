@@ -1,9 +1,10 @@
 import React from "react";
 
+
 const Resume = () => {
   return (
     <div>
-      <p>My resume</p>
+      <p>My resume in html,css and JS</p>
     </div>
   );
 };
