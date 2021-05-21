@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { LogoFacebook, LogoLinkedin, LogoGithub } from 'react-ionicons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import Crubs from "../components/crubs"
 
 export default function Index() {
@@ -24,28 +25,22 @@ export default function Index() {
 
           </div>
           <div className="inline-flex space-x-4">
+          <a 
+          target="_blank"
+          rel="noopener noreferrer" href="https://github.com/okumujustine">
+            <FontAwesomeIcon className="social-link" icon={faGithub} />
+          </a>
+          <a 
+          target="_blank"
+          rel="noopener noreferrer" href="https://github.com/okumujustine">
+            <FontAwesomeIcon className="social-link" icon={faLinkedin} />
+          </a>
 
-          <LogoFacebook
-              color={'#00000'}
-              cssClasses="cursor-pointer"
-              height="25px"
-              width="25px"
-              onClick={() => alert('Hi!')}
-          />
-          <LogoLinkedin
-              color={'#00000'}
-              cssClasses="cursor-pointer"
-              height="25px"
-              width="25px"
-              onClick={() => alert('Hi!')}
-          />
-          <LogoGithub
-              color={'#00000'}
-              cssClasses="cursor-pointer"
-              height="25px"
-              width="25px"
-              onClick={() => alert('Hi!')}
-          />
+            <a 
+          target="_blank"
+          rel="noopener noreferrer" href="https://github.com/okumujustine">
+            <FontAwesomeIcon className="social-link" icon={faFacebook} />
+            </a>
     
         </div>
         </div>
