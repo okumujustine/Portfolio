@@ -32,13 +32,13 @@ export default function Index() {
           </a>
           <a 
           target="_blank"
-          rel="noopener noreferrer" href="https://github.com/okumujustine">
+          rel="noopener noreferrer" href="https://www.linkedin.com/in/okumu-justine-b4993b13b/">
             <FontAwesomeIcon className="social-link" icon={faLinkedin} />
           </a>
 
             <a 
           target="_blank"
-          rel="noopener noreferrer" href="https://github.com/okumujustine">
+          rel="noopener noreferrer" href="https://www.facebook.com/okumu.justine.9/">
             <FontAwesomeIcon className="social-link" icon={faFacebook} />
             </a>
     
