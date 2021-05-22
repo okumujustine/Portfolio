@@ -20,7 +20,7 @@ const Projects = () => {
         <Head>
         <title>Projects | Okumu Justine</title>
       </Head>
-      <h2 className="text-2xl text-gray-800 font-bold">My Projects</h2>
+      <h2 className="text-2xl text-gray-800 font-bold pb-4">My Projects and Contributions.</h2>
       <>{localProjects.length === 0 && <div className="flex justify-center items-center lg:mt-40"><CardLoader/></div>}</>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4"> 
      {localProjects.length > 0 && projects.map((project, index) => {
