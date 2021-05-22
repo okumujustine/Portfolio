@@ -34,7 +34,7 @@ export default function Blogs() {
         {!loading && blogs.map(blog => {
           return <div key={blog.id} className="border-2 border-blue-100 rounded-md py-4 px-4 leading-relaxed">
           <div className="flex flex-col font-bold pt-3 pb-2 text-green-700">
-          <a target="_blank" rel="noopener noreferrer" href="https://dev.to/okumujustine/videos-for-portfolio-projects-vs-hosting-3ngm" className="text-2xl text-blue-800 hover:underline font-semibold">{blog.title}</a>
+          <a target="_blank" rel="noopener noreferrer" href={blog.url} className="text-2xl text-blue-800 hover:underline font-semibold">{blog.title}</a>
           <small className="underline">okumujustine</small>
           </div>
           <p className="pt-2">{blog.description}</p>
