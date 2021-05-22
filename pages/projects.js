@@ -4,7 +4,7 @@ import Head from "next/head";
 
 import Card from "../components/card"
 import CardLoader from "../components/card-loader"
-import {projects} from "./data/projects/list"
+import {projects} from "../data/projects/list"
 
 const Projects = () => {
   const [localProjects, setLocalProjects] = useState([])
