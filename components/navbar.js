@@ -6,45 +6,45 @@ import { useRouter } from "next/router";
 
 
 function Navbar() {
-    const router = useRouter();
+  const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
 
   const NavbarLinks = (
     <>
-    <Link href="/">
-    <a
-      className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800":router?.pathname == "/"})}
-    >
-      Home
+      <Link href="/">
+        <a
+          className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800": router?.pathname == "/" })}
+        >
+          Home
     </a>
-    </Link>
-    <Link href="/projects">
-    <a
-         className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800":router?.pathname == "/projects"})}
-    >
-      Projects
+      </Link>
+      <Link href="/projects">
+        <a
+          className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800": router?.pathname == "/projects" })}
+        >
+          Projects
     </a>
-    </Link>
+      </Link>
 
-    <Link href="/blogs">
+      {/* <Link href="/blogs">
     <a
       className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800":router?.pathname == "/blogs"})}
     >
       Blogs
     </a>
-    </Link>
+    </Link> */}
 
-    <a
-    href="/dist/files/okumujustine.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-      className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800":router?.pathname == "/resume"})}
-    >
-      Resume
+      <a
+        href="/dist/files/okumujustine.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800": router?.pathname == "/resume" })}
+      >
+        Resume
     </a>
     </>
-)
+  )
 
   return (
     <div>
@@ -53,11 +53,11 @@ function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center justify-between w-full">
               <div className="flex-shrink-0">
-                  <h1 className="text-gray-800 text-3xl font-bold">OJ</h1>
+                <h1 className="text-gray-800 text-3xl font-bold">OJ</h1>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                    {NavbarLinks}
+                  {NavbarLinks}
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ function Navbar() {
           {() => (
             <div className="md:hidden" id="mobile-menu">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {NavbarLinks}
+                {NavbarLinks}
               </div>
             </div>
           )}
