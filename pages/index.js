@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faFacebook, faDev } from '@fortawesome/free-brands-svg-icons'
 import Crubs from "../components/crubs"
 
 export default function Index() {
@@ -40,6 +40,12 @@ export default function Index() {
               target="_blank"
               rel="noopener noreferrer" href="https://www.facebook.com/okumu.justine.9/">
               <FontAwesomeIcon className="social-link" icon={faFacebook} />
+            </a>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer" href="https://dev.to/okumujustine">
+              <FontAwesomeIcon className="social-link" icon={faDev} />
             </a>
 
           </div>
