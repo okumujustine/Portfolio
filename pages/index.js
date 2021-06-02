@@ -54,8 +54,10 @@ export default function Index() {
           <div className="rounded-full border-4 border-gray-200 h-52 lg:h-60 w-52 lg:w-60 bg-cover" style={{ backgroundImage: "url('dist/images/zila.jpeg')" }}></div>
         </div>
       </section>
-      <div className="flex justify-center mb-20">
-        <a href="mailto:okumujustine01@gmail.com" className="bg-blue-700 text-white py-3 px-4 hover:bg-blue-900 font-bold shadow-lg rounded-md flex justify-between items-center uppercase">Work with me<span className="ml-3 animate-ping bg-white h-3 w-3 rounded-full"></span></a>
+      <div className="flex flex-col justify-center items-center mb-20">
+        <h3 className="text-2xl text-gray-500 text-center">Not your ordinary software developer 😎!</h3>
+        <br />
+        <div><a href="mailto:okumujustine01@gmail.com" className="bg-blue-700 text-white py-3 px-4 hover:bg-blue-900 font-bold shadow-lg rounded-md flex justify-between items-center uppercase w-full">Work with me<span className="ml-3 animate-ping bg-white h-3 w-3 rounded-full"></span></a></div>
       </div>
       <section className="bg-gray-50 py-16 px-8 mb-20">
         <div className="max-w-6xl mx-auto">
