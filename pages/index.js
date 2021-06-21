@@ -18,9 +18,9 @@ export default function Index() {
           <div>
             <p className="texl-lg leading-relaxed">
               A software developer building apps to make life easier and
-            <br /> contributing to open source. I have experience in Python,
-            <br /> JavaScript, TypeScript and learning ethereum (solidity).
-            <br /> Let me help you  grow your business to the moon 🚀.
+              <br /> contributing to open source. I have experience in Python,
+              <br /> JavaScript, TypeScript and learning ethereum (solidity).
+              <br /> Let me help you  grow your business to the moon 🚀.
             </p>
 
           </div>
