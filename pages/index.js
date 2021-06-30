@@ -16,7 +16,7 @@ export default function Index() {
             <h1 className=" text-3xl lg:text-5xl font-bold text-gray-800">Okumu Justine</h1>
           </div>
           <div>
-            <p className="texl-lg leading-relaxed">
+            <p className="leading-relaxed">
               A software developer building apps to make life easier and
               <br /> contributing to open source. I have experience in Python,
               <br /> JavaScript, TypeScript and learning ethereum (solidity).
