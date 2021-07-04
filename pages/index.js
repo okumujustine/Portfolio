@@ -7,13 +7,12 @@ export default function Index() {
   return (
     <div>
       <Head>
-        <title>Home | Okumu Justine | Ugandan Software Developer</title>
-        <meta name="description" content="Okumu Justine Ugandan Developer Software portfolio website" />
-        <meta name="description" content="Okumu Justine Ugandan Developer Software portfolio website" />
-        <meta property="og:title" content="Home | Okumu Justine | Ugandan Software Developer" />
-        <meta property="og:description" content="Okumu Justine Ugandan Developer Software portfolio website" />
+        <title>Home | Okumu Justine | Software Developer</title>
+        <meta name="description" content="Home | Okumu Justine | Software Developer" />
+        <meta property="og:title" content="Home | Okumu Justine | Software Developer" />
+        <meta property="og:description" content="Home | Okumu Justine | Software Developer" />
         <meta property="og:url" content="https://okumujustine.com" />
-        <meta property="og:site_name" content="Okumu Justine: Okumu Justine Ugandan Developer Software portfolio website" />
+        <meta property="og:site_name" content="Okumu Justine: Software Developer" />
       </Head>
       <section className="flex flex-col lg:flex-row justify-between items-center lg:px-4 h-1/2 pb-10 lg:pb-16">
         <div className="flex flex-col lg:justify-between space-y-6 py-4 w-10/12 lg:w-6/12 ">

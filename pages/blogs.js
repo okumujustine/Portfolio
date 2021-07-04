@@ -26,12 +26,12 @@ export default function Blogs() {
   return (
     <div>
       <Head>
-        <title>Blog | Okumu Justine | Ugandan Software Developer</title>
-        <meta name="description" content="Okumu Justine Ugandan Developer Software portfolio website" />
-        <meta property="og:title" content="Blog | Okumu Justine | Ugandan Software Developer" />
-        <meta property="og:description" content="Okumu Justine Ugandan Developer Software portfolio website" />
+        <title>Blog | Okumu Justine | Software Developer</title>
+        <meta name="description" content="Blog | Okumu Justine | Software Developer" />
+        <meta property="og:title" content="Blog | Okumu Justine | Software Developer" />
+        <meta property="og:description" content="Blog | Okumu Justine | Software Developer" />
         <meta property="og:url" content="https://okumujustine.com/blogs" />
-        <meta property="og:site_name" content="Okumu Justine: Okumu Justine Ugandan Developer Software portfolio website" />
+        <meta property="og:site_name" content="Okumu Justine: Software Developer" />
       </Head>
       <p className="text-2xl text-gray-800 font-bold pb-4">My blogs</p>
       <>{loading && <div className="flex justify-center items-center lg:mt-40"><CardLoader /></div>}</>
