@@ -73,6 +73,8 @@ export default function Index() {
           <div className="flex lg:flex-row flex-wrap flex-row justify-center">
             <Crubs text="Python" />
             <Crubs text="TypeScript" />
+            <Crubs text="JavaScript" />
+            <Crubs text="VueJS" />
             <Crubs text="Django" />
             <Crubs text="ReactJS" />
             <Crubs text="React Native" />
