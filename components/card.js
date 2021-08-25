@@ -8,7 +8,7 @@ export default function Card({ link, videoLink, description, projectTitle, myTit
     <div className="shadow-sm border-2 border-gray-100 py-6 px-3 flex flex-col mt-4">
       <div>
         {videoLink && <ReactPlayer controls={true} width="100%" height="200px" url={videoLink} />}
-        {imageLink && <div style={{ width: "100% !important", height: "200px", backgroundImage: `url('${imageLink}')`, backgroundSize: "contain", backgroundRepeat: "no-repeat" }}></div>}
+        {imageLink && <div style={{ width: "100% !important", height: "150px", backgroundImage: `url('${imageLink}')`, backgroundSize: "contain", backgroundRepeat: "no-repeat" }}></div>}
       </div>
       <hr />
       <div className="leading-relaxed">

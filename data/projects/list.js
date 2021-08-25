@@ -9,3 +9,8 @@ export const projects = [
   { link: "https://okumujustine.com/", imageLink: "dist/images/portfolio.png", projectTitle: "MY PORTFOLIO", myTitle: "Developer/Creator", videoLink: "", description: "This is my personal website where my projects, resume, skill, and projects are all easily accessible." },
   { link: "https://flt-invoice.netlify.app/", imageLink: "dist/images/invoiceapp.png", projectTitle: "INVOICE UI, MOCKAPI", myTitle: "Simple project", videoLink: "", description: "Invoice UI application for creating customers, products and giving invoices consuming MOCKAPI" },
 ]
+
+export const cprojects = [
+  { link: "https://www.vawp.pollicy.org/", imageLink: "dist/images/vawp.jpeg", projectTitle: "VAWP Dashboard", myTitle: "Developer", videoLink: "", description: "Understanding Violence against Women in Politics and Leadership in the 2021 Uganda General Elections." },
+
+]

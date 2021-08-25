@@ -17,7 +17,7 @@ export default function Index() {
       <section className="flex flex-col lg:flex-row justify-between items-center lg:px-4 h-1/2 pb-10 lg:pb-16">
         <div className="flex flex-col lg:justify-between space-y-6 py-4 w-10/12 lg:w-6/12 ">
           <div>
-            <p className="text-lg">Hello, I am 👋</p>
+            <p className="text-lg">Hello, I am</p>
             <h1 className=" text-3xl lg:text-5xl font-bold text-gray-800">Okumu Justine</h1>
           </div>
           <div>
@@ -60,7 +60,7 @@ export default function Index() {
         </div>
       </section>
       <div className="flex flex-col justify-center items-center mb-20">
-        <h3 className="text-2xl text-gray-500 text-center">Not your ordinary software developer 😎!</h3>
+        <h3 className="text-2xl text-gray-500 text-center">Incase you loved my work and experience!</h3>
         <br />
         <div><a href="mailto:okumujustine01@gmail.com" className="bg-blue-700 text-white py-3 px-4 hover:bg-blue-900 font-bold shadow-lg rounded-md flex justify-between items-center uppercase w-full">Work with me<span className="ml-3 animate-ping bg-white h-3 w-3 rounded-full"></span></a></div>
       </div>
