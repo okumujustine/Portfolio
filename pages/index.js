@@ -74,15 +74,16 @@ export default function Index() {
             <Crubs text="Python" />
             <Crubs text="TypeScript" />
             <Crubs text="JavaScript" />
-            <Crubs text="VueJS" />
+            <Crubs text="Golang" />
+            {/* <Crubs text="VueJS" /> */}
             <Crubs text="Django" />
             <Crubs text="ReactJS" />
             <Crubs text="React Native" />
             <Crubs text="MongoDB" />
-            <Crubs text="Firebase" />
+            {/* <Crubs text="Firebase" /> */}
             <Crubs text="Postgres" />
-            <Crubs text="Redux" />
-            <Crubs text="Ethereum" />
+            {/* <Crubs text="Redux" />
+            <Crubs text="Ethereum" /> */}
             <Crubs text="Solidity" />
           </div>
           <div className="flex justify-center mt-10">
