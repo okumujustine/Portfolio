@@ -12,5 +12,5 @@ export const projects = [
 
 export const cprojects = [
   { link: "https://www.vawp.pollicy.org/", imageLink: "dist/images/vawp.jpeg", projectTitle: "VAWP Dashboard", myTitle: "Developer", videoLink: "", description: "Understanding Violence against Women in Politics and Leadership in the 2021 Uganda General Elections." },
-
+  { link: "https://waybigent.com/", imageLink: "dist/images/music.png", projectTitle: "WayBigEnt Website", myTitle: "Developer", videoLink: "", description: "Music label company : (Music production and recording etc)." },
 ]
