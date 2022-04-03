@@ -24,7 +24,7 @@ export default function Index() {
             <p className="leading-relaxed">
               A software developer building apps to make life easier and
               <br /> contributing to open source. I have experience in Python,
-              <br /> JavaScript, TypeScript and learning ethereum (solidity).
+              <br /> JavaScript, TypeScript and learning solidity/Golang.
               <br /> Let me help you  grow your business to the moon 🚀.
             </p>
 
