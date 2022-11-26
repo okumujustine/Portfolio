@@ -27,13 +27,13 @@ function Navbar() {
     </a>
       </Link>
 
-      <Link href="/blogs">
+      {/* <Link href="/blogs">
     <a
       className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800":router?.pathname == "/blogs"})}
     >
       Blogs
     </a>
-    </Link>
+    </Link> */}
 
       <a
         href="/dist/files/okumujustine.pdf"

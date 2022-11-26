@@ -15,7 +15,7 @@ const Projects = () => {
   const [localProjects, setLocalProjects] = useState([])
   const [clientsProjects, setClientsProjects] = useState([])
 
-  const [projectType, setProjectType] = useState(projType.personal)
+  const [projectType, setProjectType] = useState(projType.clients)
 
   useEffect(() => {
     setTimeout(() => {
@@ -42,23 +42,23 @@ const Projects = () => {
         <meta property="og:site_name" content="Okumu Justine: Software Developer" />
       </Head>
       <div className="mb-3">
+      <button class={ClassNames("border-2 border-blue-500 hover:bg-blue-400 hover:text-white px-4 py-2 rounded-md mx-2", { "bg-blue-700 text-white": projectType === projType.clients })} onClick={onClients}>Clients</button>
         <button class={ClassNames("border-2 border-blue-500  hover:bg-blue-400 hover:text-white px-4 py-2 rounded-md mx-2", { "bg-blue-700 text-white": projectType === projType.personal })} onClick={onPersonal}>Personal</button>
-        <button class={ClassNames("border-2 border-blue-500 hover:bg-blue-400 hover:text-white px-4 py-2 rounded-md mx-2", { "bg-blue-700 text-white": projectType === projType.clients })} onClick={onClients}>Clients</button>
       </div>
-      {projectType === projType.personal ? <div>
-        <h2 className="text-2xl text-gray-800 font-bold pb-4">My Projects and Contributions.</h2>
-        <>{localProjects.length === 0 && <div className="flex justify-center items-center lg:mt-40"><CardLoader /></div>}</>
+      {projectType === projType.clients ? <div>
+        <h2 className="text-2xl text-gray-800 font-bold pb-4">Client's.</h2>
+        <>{clientsProjects.length === 0 && <div className="flex justify-center items-center lg:mt-40"><CardLoader /></div>}</>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {localProjects.length > 0 && projects.map((project, index) => {
+          {clientsProjects.length > 0 && cprojects.map((project, index) => {
             return <Card key={index} {...project} />
           })}
         </div>
       </div> : null}
-      {projectType === projType.clients ? <div>
-        <h2 className="text-2xl text-gray-800 font-bold pb-4">Clients projects.</h2>
-        <>{clientsProjects.length === 0 && <div className="flex justify-center items-center lg:mt-40"><CardLoader /></div>}</>
+      {projectType === projType.personal ? <div>
+        <h2 className="text-2xl text-gray-800 font-bold pb-4">Personal.</h2>
+        <>{localProjects.length === 0 && <div className="flex justify-center items-center lg:mt-40"><CardLoader /></div>}</>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {clientsProjects.length > 0 && cprojects.map((project, index) => {
+          {localProjects.length > 0 && projects.map((project, index) => {
             return <Card key={index} {...project} />
           })}
         </div>

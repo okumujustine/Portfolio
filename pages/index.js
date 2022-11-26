@@ -22,10 +22,8 @@ export default function Index() {
           </div>
           <div>
             <p className="leading-relaxed">
-              A software developer building apps to make life easier and
-              <br /> contributing to open source. I have experience in Python,
-              <br /> JavaScript, TypeScript and learning solidity/Golang.
-              <br /> Let me help you  grow your business to the moon 🚀.
+              <br />A software Developer with over 4 years of experience in Python & JavaScript.
+              <br/> Currently learning Salesforce CRM and Machine Learning.
             </p>
 
           </div>
@@ -56,7 +54,7 @@ export default function Index() {
           </div>
         </div>
         <div className="pt-5 lg:pt-0">
-          <div className="rounded-full border-4 border-gray-200 h-52 lg:h-60 w-52 lg:w-60 bg-cover" style={{ backgroundImage: "url('dist/images/zila.jpeg')" }}></div>
+          <div className="rounded-full border-4 border-gray-200 h-52 lg:h-60 w-52 lg:w-60 bg-cover" style={{ backgroundImage: "url('dist/images/zila1.jpeg')" }}></div>
         </div>
       </section>
       <div className="flex flex-col justify-center items-center mb-20">
@@ -72,19 +70,17 @@ export default function Index() {
           </div>
           <div className="flex lg:flex-row flex-wrap flex-row justify-center">
             <Crubs text="Python" />
-            <Crubs text="TypeScript" />
-            <Crubs text="JavaScript" />
-            <Crubs text="Golang" />
-            {/* <Crubs text="VueJS" /> */}
+            <Crubs text="Flask" />
             <Crubs text="Django" />
+
+            <Crubs text="TypeScript" />
             <Crubs text="ReactJS" />
-            <Crubs text="React Native" />
+
+            <Crubs text="Elasticsearch" />
+            <Crubs text="Docker" />
+
             <Crubs text="MongoDB" />
-            {/* <Crubs text="Firebase" /> */}
             <Crubs text="Postgres" />
-            {/* <Crubs text="Redux" />
-            <Crubs text="Ethereum" /> */}
-            <Crubs text="Solidity" />
           </div>
           <div className="flex justify-center mt-10">
             <a href="mailto:okumujustine01@gmail.com" className="bg-green-700 text-white py-3 px-4 hover:bg-green-900 font-bold shadow-lg rounded-md flex justify-between items-center uppercase">Work with me<span className="ml-3 animate-ping bg-white h-3 w-3 rounded-full"></span></a>
