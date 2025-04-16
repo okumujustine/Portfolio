@@ -35,13 +35,13 @@ function Navbar() {
     </a>
     </Link> */}
 
-      <a
+      {/* <a
         href="/dist/files/okumujustine.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={ClassNames("text-gray-400 hover:text-gray-700 px-3 py-2 text-sm font-medium", { "text-gray-800 border-b-2 border-gray-800": router?.pathname == "/resume" })}
       >
-        Resume
+        Resume */}
     </a>
     </>
   )
