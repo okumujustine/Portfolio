@@ -6,9 +6,9 @@ import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -18,11 +18,12 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ArticlePage({ params }: ArticlePageProps) {
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const { slug } = await params;
   let article;
   
   try {
-    article = getArticleBySlug(params.slug);
+    article = getArticleBySlug(slug);
   } catch {
     notFound();
   }

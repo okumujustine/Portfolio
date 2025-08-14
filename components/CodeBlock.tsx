@@ -2,20 +2,20 @@ import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-interface CodeProps {
+interface CodeBlockProps {
   inline?: boolean;
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
 }
 
-export function CodeBlock({ inline, className, children, ...props }: CodeProps) {
+export const CodeBlock = ({ inline, className, children }: CodeBlockProps) => {
   const match = /language-(\w+)/.exec(className || '');
   const language = match ? match[1] : '';
 
   return !inline && match ? (
     <SyntaxHighlighter
-      style={vscDarkPlus}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      style={vscDarkPlus as any}
       language={language}
       PreTag="div"
       customStyle={{
@@ -24,13 +24,12 @@ export function CodeBlock({ inline, className, children, ...props }: CodeProps) 
         fontSize: '0.9rem',
         lineHeight: '1.5'
       }}
-      {...props}
     >
       {String(children).replace(/\n$/, '')}
     </SyntaxHighlighter>
   ) : (
-    <code className="inline-code" {...props}>
+    <code className="inline-code">
       {children}
     </code>
   );
-}
+};

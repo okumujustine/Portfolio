@@ -44,52 +44,57 @@ export function getAllArticles(): Article[] {
 
 export const projects = [
   {
-    title: "FinTech Payment Gateway",
-    description: "Built a high-performance payment processing system handling $10M+ monthly transactions with 99.99% uptime. Features real-time fraud detection, multi-currency support, and PCI DSS compliance.",
-    tech: ["Node.js", "PostgreSQL", "Redis", "AWS Lambda", "Stripe"],
+    title: "Enterprise FinTech Payment Gateway",
+    description: "Led the architecture and development of a high-performance payment processing system handling $50M+ monthly transactions with 99.99% uptime. Features real-time fraud detection, multi-currency support, PCI DSS compliance, and horizontal auto-scaling. Reduced transaction processing time by 65% and achieved SOC 2 Type II certification.",
+    tech: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS Lambda", "Kubernetes", "Stripe API", "Apache Kafka"],
     github: "https://github.com/okumujustine/fintech-gateway",
     demo: "https://fintech-gateway-demo.vercel.app"
   },
   {
-    title: "E-Learning Platform",
-    description: "Scalable learning management system serving 50K+ students with video streaming, real-time collaboration, and AI-powered content recommendations. Built with microservices architecture.",
-    tech: ["Next.js", "TypeScript", "Python", "Django", "PostgreSQL"],
+    title: "AI-Powered Learning Platform",
+    description: "Architected and led a team of 12 engineers to build a scalable LMS serving 100K+ students across 50+ countries. Features include adaptive learning algorithms, real-time video streaming with 4K support, collaborative whiteboards, and ML-driven content personalization. Achieved 40% improvement in student engagement and 25% better completion rates.",
+    tech: ["Next.js", "TypeScript", "Python", "TensorFlow", "Django", "PostgreSQL", "Redis", "AWS", "Docker"],
     github: "https://github.com/okumujustine/elearning-platform",
     demo: "https://elearning-demo.vercel.app"
   },
   {
-    title: "Real-time Analytics Dashboard",
-    description: "Enterprise analytics platform processing 1B+ events daily with sub-second query performance. Features custom visualization engine and real-time data streaming capabilities.",
-    tech: ["React", "D3.js", "Apache Kafka", "ClickHouse", "Docker"],
+    title: "Real-time Analytics & Intelligence Platform",
+    description: "Built an enterprise-grade analytics platform processing 5B+ events daily with sub-200ms query performance. Led the migration from monolithic to microservices architecture, implemented custom data visualization engine, and established real-time data pipelines. Platform now powers business intelligence for Fortune 500 clients with 99.9% SLA.",
+    tech: ["React", "TypeScript", "D3.js", "Apache Kafka", "ClickHouse", "Kubernetes", "Grafana", "Terraform"],
     github: "https://github.com/okumujustine/analytics-dashboard",
     demo: "https://analytics-demo.vercel.app"
   },
   {
-    title: "Distributed Task Scheduler",
-    description: "Open-source task scheduling system with auto-scaling, retry mechanisms, and monitoring. Used by 100+ companies for background job processing and workflow automation.",
-    tech: ["Python", "Redis", "Kubernetes", "Prometheus", "React"],
+    title: "Open-Source Distributed Task Orchestrator",
+    description: "Created and maintain a cloud-native task scheduling system with intelligent auto-scaling, circuit breakers, and advanced monitoring. Adopted by 500+ companies worldwide for mission-critical workflow automation. Features include dynamic resource allocation, failure recovery, and comprehensive audit trails. Active community of 50+ contributors.",
+    tech: ["Go", "Python", "Kubernetes", "Redis", "Prometheus", "React", "gRPC", "Helm"],
     github: "https://github.com/okumujustine/task-scheduler"
   }
 ];
 
 export const profile = {
   name: "Justine Okumu",
-  title: "Senior Software Developer & Technical Lead",
-  bio: "I build scalable web applications that millions of users love. From concept to deployment, I craft elegant solutions using modern technologies. Passionate about clean code, system architecture, and sharing knowledge through writing and mentoring.",
+  title: "Senior Technical Leader & Software Architect",
+  bio: "I architect and build scalable enterprise systems that handle millions of users and billions of transactions. With 7+ years of experience leading high-performing engineering teams, I specialize in transforming complex business challenges into elegant technical solutions. Expert in distributed systems, microservices architecture, and driving engineering excellence through mentorship and best practices.",
   email: "okumu.justine2017@gmail.com",
   github: "https://github.com/okumujustine",
   linkedin: "https://linkedin.com/in/okumujustine",
   twitter: "https://twitter.com/okumujustine",
   skills: [
-    "Node.js", "TypeScript", "React", "Next.js", 
-    "Python", "Django", "PostgreSQL", "MongoDB", 
-    "AWS", "Docker", "Kubernetes", "Redis",
-    "System Design", "Microservices", "API Development"
+    "Technical Leadership", "Software Architecture", "System Design",
+    "Node.js", "TypeScript", "Python", "Java", "React", "Next.js", 
+    "Django", "Spring Boot", "PostgreSQL", "MongoDB", "Redis", 
+    "AWS", "Azure", "Docker", "Kubernetes", "Terraform",
+    "Microservices", "API Design", "DevOps", "CI/CD",
+    "Team Management", "Code Reviews", "Technical Mentoring"
   ],
   achievements: [
-    "Led development of applications serving 1M+ users",
-    "Reduced API response times by 60% through optimization",
-    "Mentored 15+ junior developers",
-    "Open source contributor with 500+ GitHub stars"
+    "Led engineering teams of 15+ developers across multiple products",
+    "Architected systems processing $50M+ in annual revenue",
+    "Reduced infrastructure costs by 40% through optimization and cloud migration",
+    "Improved deployment frequency from monthly to daily releases",
+    "Mentored 25+ engineers, with 80% receiving promotions",
+    "Speaker at 5+ technical conferences on scalability and leadership",
+    "Open source contributor with 2K+ GitHub stars and 500+ forks"
   ]
 };

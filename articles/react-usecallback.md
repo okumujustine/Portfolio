@@ -1,13 +1,11 @@
 ---
 title: "React useCallback Hook: Optimizing Function References"
 date: "2024-12-18"
-excerpt: "Learn how to use React's useCallback hook to optimize performance by memoizing function references and preventing unnecessary re-renders."
+excerpt: "Learn how to use React's useCallback hook to optimize performance by memoizing function references."
 tags: ["React", "Hooks", "Performance", "JavaScript"]
 ---
 
-## React useCallback Hook: Optimizing Function References
-
-The `useCallback` hook is a React optimization hook that returns a memoized version of a function that only changes when its dependencies change.
+The `useCallback` hook returns a memoized function that only changes when its dependencies change, preventing unnecessary re-renders.
 
 ## Basic Syntax
 
@@ -20,34 +18,60 @@ const memoizedCallback = useCallback(
 );
 ```
 
-## Why Use useCallback?
-
-### Problem: Functions Recreated on Every Render
+## Example: Todo List
 
 ```jsx
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
-// Without useCallback - function recreated every render
-function ParentComponent() {
-  const [count, setCount] = useState(0);
-  const [text, setText] = useState('');
+function TodoApp() {
+  const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState('all');
 
-  // This function is recreated on every render
-  const handleClick = () => {
-    console.log('Button clicked!');
-    setCount(prev => prev + 1);
+  // Without useCallback - function recreated every render
+  const addTodo = (text) => {
+    setTodos(prev => [...prev, { id: Date.now(), text, done: false }]);
   };
 
-  // Child component will re-render even when only 'text' changes
-  // because handleClick is a new function reference each time
+  // With useCallback - function memoized
+  const toggleTodo = useCallback((id) => {
+    setTodos(prev => 
+      prev.map(todo => 
+        todo.id === id ? { ...todo, done: !todo.done } : todo
+      )
+    );
+  }, []); // No dependencies - function never changes
+
   return (
     <div>
-      <input 
-        value={text} 
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Type something..."
-      />
-      <p>Count: {count}</p>
+      <AddTodo onAdd={addTodo} />
+      <TodoList todos={todos} onToggle={toggleTodo} />
+    </div>
+  );
+}
+```
+
+## When to Use useCallback
+
+**Passing callbacks to child components:**
+
+```jsx
+// Child won't re-render unnecessarily
+const handleClick = useCallback(() => {
+  doSomething();
+}, []);
+
+return <ExpensiveChild onClick={handleClick} />;
+```
+
+**Dependencies matter:**
+
+```jsx
+const handleSearch = useCallback((query) => {
+  searchAPI(query, filter);
+}, [filter]); // Re-create when filter changes
+```
+
+Use `useCallback` when passing functions to memoized child components or when functions are expensive to create.
       <ExpensiveChildComponent onClick={handleClick} />
     </div>
   );
