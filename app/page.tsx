@@ -1,5 +1,5 @@
 import Navigation from '@/components/Navigation';
-import { profile } from '@/lib/data';
+import { profile } from '@/lib/projects';
 import Link from 'next/link';
 
 export default function Home() {
