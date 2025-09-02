@@ -13,7 +13,7 @@ export default function Projects() {
             <p>{project.description}</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
               {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="cta-link">git clone</a>
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="cta-link">git</a>
               )}
               {project.demo && (
                 <a href={project.demo} target="_blank" rel="noopener noreferrer" className="cta-link">demo →</a>
