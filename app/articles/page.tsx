@@ -8,31 +8,21 @@ export default function Articles() {
   return (
     <>
       <Navigation />
-      <div className="container">
-        <h1>Articles</h1>
-        <p>Technical articles and insights from my development experience.</p>
+      <div className="content-container">
         
-        <div className="articles-list">
-          {articles.map((article) => (
-            <div key={article.slug} className="card">
-              <h3>
-                <Link href={`/articles/${article.slug}`}>
-                  {article.title}
-                </Link>
-              </h3>
-              <div className="date">{article.date}</div>
-              <p className="excerpt">{article.excerpt}</p>
-              
-              {article.tags && article.tags.length > 0 && (
-                <div className="tags">
-                  {article.tags.map((tag) => (
-                    <span key={tag} className="tag">{tag}</span>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+        {articles.map((article) => (
+          <div key={article.slug} style={{ marginBottom: '1.5rem' }}>
+            <h3>
+              <Link href={`/articles/${article.slug}`} className="cta-link" style={{ fontSize: '1.125rem', fontWeight: '600' }}>
+                {article.title}
+              </Link>
+            </h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)', marginBottom: '0.5rem' }}>
+              {article.date}
+            </p>
+            <p>{article.excerpt}</p>
+          </div>
+        ))}
       </div>
     </>
   );

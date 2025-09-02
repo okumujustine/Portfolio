@@ -4,13 +4,10 @@ export default function Navigation() {
   return (
     <nav className="nav">
       <div className="nav-container">
-        <Link href="/" className="nav-logo">
-          Justine Okumu
-        </Link>
         <div className="nav-links">
-          <Link href="/">Home</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/articles">Articles</Link>
+          <Link href="/" className="nav-link">~/home</Link>
+          <Link href="/projects" className="nav-link">~/projects</Link>
+          <Link href="/articles" className="nav-link">~/articles</Link>
         </div>
       </div>
     </nav>

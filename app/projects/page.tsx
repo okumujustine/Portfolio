@@ -5,37 +5,22 @@ export default function Projects() {
   return (
     <>
       <Navigation />
-      <div className="container">
-        <h1>Projects</h1>
-        <p>Here are some of the projects I&apos;ve worked on.</p>
+      <div className="content-container">
         
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="card">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              
-              <div className="tags">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="tag">{tech}</span>
-                ))}
-              </div>
-              
-              <div className="project-links">
-                {project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                )}
-                {project.demo && (
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                  </a>
-                )}
-              </div>
+        {projects.map((project, index) => (
+          <div key={index} style={{ marginBottom: '2rem' }}>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="cta-link">git clone</a>
+              )}
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="cta-link">demo →</a>
+              )}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </>
   );
