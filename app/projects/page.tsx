@@ -35,20 +35,8 @@ export default function Projects() {
           <div key={index} className="project-item">
             <div className="project-content">
               <h3>{project.title}</h3>
-              <div className="project-description">
-                <div className="project-image" onClick={() => openZoom(project.image)}>
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    loading="lazy"
-                  />
-                  <div className="zoom-overlay">
-                    <span className="zoom-icon">🔍</span>
-                  </div>
-                </div>
-                <div className="project-text">
-                  <p>{project.description}</p>
-                </div>
+              <div className="project-info">
+                <p>{project.description}</p>
                 <div className="project-links">
                   {project.github && (
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="cta-link">git</a>
@@ -56,6 +44,16 @@ export default function Projects() {
                   {project.demo && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="cta-link">demo →</a>
                   )}
+                </div>
+              </div>
+              <div className="project-image-banner" onClick={() => openZoom(project.image)}>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  loading="lazy"
+                />
+                <div className="zoom-overlay">
+                  <span className="zoom-icon">🔍</span>
                 </div>
               </div>
             </div>

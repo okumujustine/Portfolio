@@ -266,37 +266,46 @@ body {
   color: var(--text-primary);
 }
 
-.project-description {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
+.project-info {
+  margin-bottom: 1.5rem;
 }
 
-.project-image {
-  flex: 0 0 120px;
-  height: 90px;
-  border-radius: var(--radius-md);
+.project-info p {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.project-image-banner {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
-.project-image:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.project-image-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12), 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.project-image img {
+.project-image-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-normal);
+  object-position: center top;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: contrast(1.1) saturate(1.1) brightness(1.02);
 }
 
-.project-image:hover img {
+.project-image-banner:hover img {
   transform: scale(1.05);
+  filter: contrast(1.15) saturate(1.15) brightness(1.05);
 }
 
 .zoom-overlay {
@@ -305,12 +314,13 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-image:hover .zoom-overlay {
@@ -318,8 +328,10 @@ body {
 }
 
 .zoom-icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 }
 
 .image-modal {
@@ -328,12 +340,14 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 2rem;
+  animation: fadeIn 0.3s ease-out;
 }
 
 .modal-content {
@@ -343,72 +357,68 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-content img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .close-button {
   position: absolute;
   top: -3rem;
   right: -1rem;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .close-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.project-text {
-  flex: 1;
-}
-
-.project-text p {
-  margin: 0;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-links {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: flex-end;
+  gap: 1rem;
 }
 
 @media (max-width: 640px) {
-  .project-description {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-  
-  .project-image {
-    flex: none;
-    width: 100%;
-    height: 160px;
-  }
-  
-  .project-links {
-    flex-direction: row;
-    align-items: flex-start;
+  .project-image-banner {
+    height: 180px;
   }
   
   .project-item {
@@ -422,9 +432,11 @@ body {
   .close-button {
     top: -2rem;
     right: 0;
-    font-size: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    font-size: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
   }
 }
 
